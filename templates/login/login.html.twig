@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="content">
+        <div class="form-box">
+            <form class="login-form">
+                <p>Iniciar sesión</p>
+                <input id="username-lg" class="login-inputs" type="text" placeholder="usuario"/>
+                <input id="password-lg" class="login-inputs" type="password" placeholder="contraseña"/>
+                <button id="access" class="access-btn" type="submit">ACCEDER</button>
+                <a href={{path('register')}} class="go-register">¿Aún no estás registrado?</a>
+            </form>
+        </div>
+    </div>   
+{% endblock %}

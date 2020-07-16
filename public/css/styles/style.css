@@ -1,0 +1,192 @@
+/* Hoja de estilos pruebas HMG*/
+
+/* GENERALES */
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+  
+    /* Fuentes de letra */
+  
+    font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smooothing: antialiased;
+    -moz-font-smooothing: antialiased;
+    -moz-osx-font-smooothing: antialiased;
+}
+
+/* LOGIN */
+
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-box{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0e363d;
+    border-radius: 10px;
+    background-color: #f1fffa;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.login-form p{
+    font-size: 20pt;
+    color:#01748e;
+    margin-top: 10px;
+    margin-bottom: 10%;
+
+}
+.login-inputs{
+    width: 80%;
+    border-radius: 2px;
+    border: 1px solid #0e363d4f;
+    height: 25px;
+    margin-bottom: 2%;
+    font-size: 14pt;
+    text-align: left;
+    padding: 2%;
+}
+.access-btn{
+    width: 40%;
+    height: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 12pt;
+    text-align: center;
+    text-justify: distribute;
+    background-color: #f5a623;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 25px;
+}
+.go-register{
+    margin-bottom: 10px;
+}
+
+/* LISTADO DE USUARIOS */
+
+.users-title{
+    margin-bottom: 15px;
+    font-size: 18pt;
+    color:#01748e;
+}
+.user-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height:10%;
+    border: 2px solid #0e363d;
+    border-radius: 15px;
+}
+.user-field{
+    margin-right: 5px;
+    font-size: 14pt;
+    color: #555555;
+}
+.user-data{
+    margin-right: 15px;
+    font-size: 12pt;
+    color: #01748e;
+}
+.edit-btn{
+    margin-right: 1%;
+    margin-left: 10px;
+    width: 10%;
+    height: 30px;
+    font-size: 10pt;
+    color: white;
+    text-align: center;
+    text-justify: distribute;
+    background-color: #f5a623;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 5px;
+    outline: none;
+}
+.delete-btn{
+    width: 10%;
+    height: 30px;
+    font-size: 10pt;
+    color: white;
+    text-align: center;
+    text-justify: distribute;
+    background-color: #f44332;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 5px;
+    outline: none;
+}
+
+/* PÁGINA EDICIÓN DE USUARIOS */
+
+.edit-user-box{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0e363d;
+    border-radius: 10px;
+    background-color: #f1fffa;
+}
+.title-edit-user{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18pt;
+    color:#01748e;
+}
+.edit-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.edit-inputs{
+    width: 60%;
+    border-radius: 2px;
+    border: 1px solid #0e363d4f;
+    height: 25px;
+    margin-bottom: 2%;
+    font-size: 14pt;
+    text-align: left;
+    padding: 2%;
+}
+.edit-btn{
+    width: 30%;
+    height: 30px;
+    margin-top: 5%;
+    margin-bottom: 15px;
+    font-size: 12pt;
+    text-align: center;
+    text-justify: distribute;
+    background-color: #f5a623;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 5px;
+}
+.cancel-btn{
+    width: 30%;
+    height: 30px;
+    margin-bottom: 30px;
+    font-size: 12pt;
+    text-align: center;
+    text-justify: distribute;
+    color: white;
+    background-color: #f44332;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 5px;
+}
