@@ -137,6 +137,13 @@
     font-size: 18pt;
     color:#01748e;
 }
+.title-edit-user-sub{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16pt;
+    color:#0e363d;
+    text-transform: capitalize;
+}
 .edit-form{
     width: 100%;
     display: flex;

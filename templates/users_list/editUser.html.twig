@@ -4,12 +4,23 @@
 
     <div class="content">
         <div class="edit-user-box">
-            <form class="edit-form">
-                <h1 class="title-edit-user">Editar datos de: {{user.name}}</h1>
+            <form class="edit-form" action="PUT">
+                <h1 class="title-edit-user">Editar datos de:</h1>
+                <h1 class="title-edit-user-sub">{{user.name}}</h1>
+                {#
+                <input name='name' id="username-ef" class="edit-inputs" type="text" placeholder="{{user.name}}">
+                <input name='password' id="password-ef" class="edit-inputs" type="password" placeholder="contraseña nueva"/>
+                <input name='email' id="email-ef" class="edit-inputs" type="email" placeholder="{{user.email}}"/>
+                <input name='coment' id="coments-ef" class="edit-inputs" type="text" placeholder="{{user.coment}}"/>
+
+                <button id="access-ef" class="edit-button-u" type="submit">ACEPTAR</button>
+                #}
                 {{form(editForm)}}
-            </form>
-            <a id="access-ef" class="cancel-button-u" href="{{path('users_list')}}">CANCELAR</a>
+
+               
+            </form>  
         </div>
+        <a id="access-ef" class="cancel-button-u" href="{{path('users_list')}}">Volver atrás</a>
     </div>    
 
 {% endblock %}

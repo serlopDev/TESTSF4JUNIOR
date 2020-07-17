@@ -6,9 +6,9 @@ use App\Entity\User;
 use App\Form\UserType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UsersListController extends AbstractController
@@ -27,39 +27,35 @@ class UsersListController extends AbstractController
             'users'=> $usersList,
         ]);
     }
-
+    
     // Edición de usuario
 
     /**
-     * @Route("/usuarios/{id}", name="edit_user")
+     * @Route("/usuario/editar/{id}", name="edit_user")
      */
 
-    public function editUser($id, Request $request, UserPasswordEncoderInterface $passwordEncoder){
-
-        $user = new User();
+    public function updateUser($id,Request $request)
+    {
         $em = $this->getDoctrine()->getManager();
-
         $user = $em->getRepository(User::class)->find($id);
-
+        
+        // Creamos formulario y recogemos los datos
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
-            $form->getData();
-            $user->setPassword($passwordEncoder->encodePassword($user, $form['password']->getData()));
-
-            $em->persist($user);
+        if($form->isSubmitted()){
+            $user = $form->getData();
             $em->flush();
-
-            return $this->redirectToRoute('users_list');
+            return -$this->redirectToRoute('users_list');
         }
 
-        return $this->render('users_list/edituser.html.twig', ['user' => $user, 'editForm'=>$form->createView()]);
+        
+        return $this->render('users_list/editUser.html.twig',['user' => $user, 'editForm' => $form->createView()]);
     }
 
-       
-        
-    // Eliminar usuario
+
+    
+     // Eliminar usuario
 
     /**
      * @Route("/usuarios/borrar/{id}", name="delete_user")
