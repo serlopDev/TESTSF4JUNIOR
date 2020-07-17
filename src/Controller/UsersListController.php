@@ -34,22 +34,26 @@ class UsersListController extends AbstractController
      * @Route("/usuario/editar/{id}", name="edit_user")
      */
 
-    public function updateUser($id,Request $request)
+    public function updateUser(Request $request, UserPasswordEncoderInterface $passwordEncoder, $id)
     {
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository(User::class)->find($id);
-        
-        // Creamos formulario y recogemos los datos
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
-        if($form->isSubmitted()){
-            $user = $form->getData();
-            $em->flush();
-            return -$this->redirectToRoute('users_list');
+        if(!$user){
+            throw $this->createNotFoundException('No se encuentra el usuario con id: '.$id);
         }
 
-        
+        if($form->isSubmitted() && $form->isValid()){
+            $user = $form->getData();
+            $user->setPassword($passwordEncoder->encodePassword($user, $form['password']->getData()));
+            $em->persist($user);
+            $em->flush();
+            
+            return $this->redirectToRoute('users_list');
+        }
+
         return $this->render('users_list/editUser.html.twig',['user' => $user, 'editForm' => $form->createView()]);
     }
 
