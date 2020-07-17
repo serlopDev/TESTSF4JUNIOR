@@ -35,7 +35,7 @@ class RegisterController extends AbstractController
 
             // Redirección
             
-            return $this->redirectToRoute('login');
+            return $this->redirectToRoute('app_login');
         }
         
 

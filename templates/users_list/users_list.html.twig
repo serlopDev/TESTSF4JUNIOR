@@ -11,9 +11,11 @@
             <p class="user-data">{{user.email}}</p>
             <p class="user-field">COMENTARIO:</p>
             <p class="user-data">{{user.coment}}</p>
-            <button id="edit-button" class="edit-btn" onclick="removeUser()">Editar</button>
-            <button id="delete-button" class="delete-btn">Eliminar</button>
-            <p>{{pruebas}}</p>
+
+            <div class="buttons-container-u">
+            <a id="edit-button" class="edit-button-u" href="{{path('edit_user', {'id': user.id})}}">Editar</a>
+            <a id="delete-button" class="cancel-button-u" href="{{path('delete_user', {'id': user.id})}}">Eliminar</a>
+            </div>
         </article>
         {% endfor %}
     </div>

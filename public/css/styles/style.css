@@ -59,14 +59,15 @@
     margin-bottom: 2%;
     font-size: 14pt;
     text-align: left;
-    padding: 2%;
+    padding: 5% 2% 5% 2%;
 }
 .access-btn{
     width: 40%;
-    height: 30px;
+    height: 40px;
     margin-top: 5%;
     margin-bottom: 5%;
-    font-size: 12pt;
+    font-size: 16px;
+    color: white;
     text-align: center;
     text-justify: distribute;
     background-color: #f5a623;
@@ -74,23 +75,36 @@
     border-radius: 25px;
 }
 .go-register{
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.labels-login{
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: left;
     margin-bottom: 10px;
+    margin-top: 10px;
+    width: 80%;
 }
 
 /* LISTADO DE USUARIOS */
 
 .users-title{
+    margin-top: 10px;
     margin-bottom: 25px;
     font-size: 18pt;
     color:#01748e;
 }
 .user-box{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 60%;
+    width: 70%;
     border: 2px solid #0e363d;
     border-radius: 15px;
 }
@@ -103,32 +117,6 @@
     margin-right: 15px;
     font-size: 12pt;
     color: #01748e;
-}
-.edit-btn{
-    margin-right: 1%;
-    margin-left: 10px;
-    width: 10%;
-    height: 30px;
-    font-size: 10pt;
-    color: white;
-    text-align: center;
-    text-justify: distribute;
-    background-color: #f5a623;
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    border-radius: 5px;
-    outline: none;
-}
-.delete-btn{
-    width: 10%;
-    height: 30px;
-    font-size: 10pt;
-    color: white;
-    text-align: center;
-    text-justify: distribute;
-    background-color: #f44332;
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    border-radius: 5px;
-    outline: none;
 }
 
 /* PÁGINA EDICIÓN DE USUARIOS */
@@ -166,27 +154,42 @@
     text-align: left;
     padding: 2%;
 }
-.edit-btn{
-    width: 30%;
-    height: 30px;
-    margin-top: 5%;
-    margin-bottom: 15px;
-    font-size: 12pt;
-    text-align: center;
-    text-justify: distribute;
-    background-color: #f5a623;
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    border-radius: 5px;
+.buttons-container-u{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
 }
-.cancel-btn{
-    width: 30%;
+.edit-button-u{
+    width: 40%;
     height: 30px;
     margin-bottom: 30px;
     font-size: 12pt;
     text-align: center;
     text-justify: distribute;
     color: white;
+    text-transform: uppercase;
+    background-color: #f5a623;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px 5px 10px 15px;
+    padding: 2px;
+}
+.cancel-button-u{
+    width: 40%;
+    height: 30px;
+    margin-bottom: 30px;
+    font-size: 12pt;
+    text-align: center;
+    text-justify: distribute;
+    color: white;
+    text-transform: uppercase;
     background-color: #f44332;
     border: 1px solid rgba(0, 0, 0, 0.137);
     border-radius: 5px;
+    text-decoration: none;
+    margin: 10px 5px 10px 15px;
+    padding: 2px;
 }

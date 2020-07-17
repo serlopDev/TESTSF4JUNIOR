@@ -3,12 +3,13 @@
 {% block body %}
 
     <div class="content">
-        <div class="form-box">
-            <div class="login-form">
-            <p>Registrate</p>
-            {{user.name}}
-            </div>
+        <div class="edit-user-box">
+            <form class="edit-form">
+                <h1 class="title-edit-user">Editar datos de: {{user.name}}</h1>
+                {{form(editForm)}}
+            </form>
+            <a id="access-ef" class="cancel-button-u" href="{{path('users_list')}}">CANCELAR</a>
         </div>
-    </div>
+    </div>    
 
 {% endblock %}
