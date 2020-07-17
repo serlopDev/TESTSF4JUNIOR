@@ -80,17 +80,17 @@
 /* LISTADO DE USUARIOS */
 
 .users-title{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-size: 18pt;
     color:#01748e;
 }
 .user-box{
+    margin-bottom: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 60%;
-    height:10%;
     border: 2px solid #0e363d;
     border-radius: 15px;
 }
