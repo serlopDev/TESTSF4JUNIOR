@@ -31,7 +31,7 @@ class UsersListController extends AbstractController
     // Edición de usuario
 
     /**
-     * @Route("/usuario/editar/{id}", name="edit_user")
+     * @Route("/usuarios/editar/{id}", name="edit_user")
      */
 
     public function updateUser(Request $request, UserPasswordEncoderInterface $passwordEncoder, $id)
